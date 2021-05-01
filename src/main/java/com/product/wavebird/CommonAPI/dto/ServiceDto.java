@@ -1,6 +1,7 @@
 package com.product.wavebird.CommonAPI.dto;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 public class ServiceDto implements Serializable {
     private static final long serialVersionUID = 14426912262813845L;
@@ -8,6 +9,15 @@ public class ServiceDto implements Serializable {
     private Long serviceId;
     private String serviceName;
     private String serviceDescription;
+    private BigDecimal cost;
+
+    public BigDecimal getCost() {
+        return cost;
+    }
+
+    public void setCost(BigDecimal cost) {
+        this.cost = cost;
+    }
 
     public Long getServiceId() {
         return serviceId;
@@ -32,14 +42,4 @@ public class ServiceDto implements Serializable {
     public void setServiceDescription(String serviceDescription) {
         this.serviceDescription = serviceDescription;
     }
-
-    public ServiceDto(Long serviceId, String serviceName, String serviceDescription) {
-        this.serviceId = serviceId;
-        this.serviceName = serviceName;
-        this.serviceDescription = serviceDescription;
-    }
-
-    public ServiceDto() {
-    }
-
 }
