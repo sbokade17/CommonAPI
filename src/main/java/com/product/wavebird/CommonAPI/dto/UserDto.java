@@ -15,6 +15,42 @@ public class UserDto implements Serializable {
     private String encryptedPassword;
     private Set<RoleDto> roles;
     private String userType;
+    private Boolean isVerified;
+    private String picture;
+    private Boolean isKycDone;
+    private Boolean isActive;
+
+    public Boolean getVerified() {
+        return isVerified;
+    }
+
+    public void setVerified(Boolean verified) {
+        isVerified = verified;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public Boolean getKycDone() {
+        return isKycDone;
+    }
+
+    public void setKycDone(Boolean kycDone) {
+        isKycDone = kycDone;
+    }
+
+    public Boolean getActive() {
+        return isActive;
+    }
+
+    public void setActive(Boolean active) {
+        isActive = active;
+    }
 
     public String getUserId() {
         return userId;
