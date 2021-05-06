@@ -64,6 +64,7 @@
 			</exclusions>
 		</dependency>
 	</dependencies>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -75,14 +76,27 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-<!--	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>-->
+
+	<build>
+		<extensions>
+			<extension>
+				<groupId>com.github.ehsaniara</groupId>
+				<artifactId>maven-repository-aws-s3</artifactId>
+				<version>1.2.10</version>
+			</extension>
+		</extensions>
+
+	</build>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>dodo-maven-repo-snapshot</id>
+			<url>s3://dodo-maven-repo/snapshot</url>
+		</snapshotRepository>
+		<repository>
+			<id>dodo-maven-repo-release</id>
+			<url>s3://dodo-maven-repo/release</url>
+		</repository>
+	</distributionManagement>
 	<repositories>
 		<repository>
 			<id>spring-milestones</id>
@@ -99,6 +113,10 @@
 			<releases>
 				<enabled>false</enabled>
 			</releases>
+		</repository>
+		<repository>
+			<id>repo.teamed.io</id>
+			<url>s3://dodo-maven-repo/release</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
