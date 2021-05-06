@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+
+    <servers>
+        <server>
+            <id>dodo-maven-repo-snapshot</id>
+            <username>AKIAYPUV36T6PDM6VZ6G</username>
+            <password>rJuCnhIGgHfzYYeg4h8wa67RxRDWudddXSJv9v+f</password>
+            <configuration>
+                <region>ap-south-1</region>
+                <publicRepository>false</publicRepository>
+            </configuration>
+        </server>
+        <server>
+            <id>dodo-maven-repo-release</id>
+            <username>AKIAYPUV36T6PDM6VZ6G</username>
+            <password>rJuCnhIGgHfzYYeg4h8wa67RxRDWudddXSJv9v+f</password>
+            <configuration>
+                <region>ap-south-1</region>
+                <publicRepository>false</publicRepository>
+            </configuration>
+        </server>
+
+    </servers>
+</settings>
